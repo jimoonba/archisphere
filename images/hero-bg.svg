@@ -1,0 +1,30 @@
+/* 파란색 그라데이션 배경 이미지 */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #1e3c72, #2a5298);
+}
+
+/* 유리 같은 효과를 가진 파란색 물결 모양 */
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: radial-gradient(circle at center, rgba(173, 216, 230, 0.8) 0%, rgba(0, 0, 255, 0.4) 70%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: wave 8s infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    border-radius: 50% 50% 30% 70% / 60% 40% 70% 40%;
+    transform: rotate(360deg);
+  }
+}
